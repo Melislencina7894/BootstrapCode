@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS, cualquier duda consultar en la carpeta de Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style3.css">
+    <title>Conferencias</title>
+  </head>
+
+    <!--Para el scroll-->             <!--del div del nav-->      <!--56px es el ancho del header-->
+  <body data-bs-spy="scroll"  data-bs-target="#navbarSupportedContent" data-bs-offset="56">
+
+
+
+    <!-- Header-->
+    <header>
+            <!--  si pongo light el color de fondo del nav no se ve, así que pongo dark.-->
+                                                                        <!--Para el scroll-->
+                                                                    <!-- El fixed-top es para
+                                                                    que nos acompañe el header-->
+        <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <!--agrego esto porque el logo de Platzi está desalineado, al igual que comprar tickets-->
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                    <!-- al lado de la img agrego Conff Hawaii-->
+                    <img src="../proyecto3/Imagenesb/LOGO.jpg" alt="logo">Conferencias
+                    </a>
+                    <!--menú hamburguesa-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- para tirarlo a la derecha ml, lo que sería el margen lefth-->
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                            <!--Para el scroll-->
+                            <a class="nav-link" href="#main">La conferencia</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#speakers">Los oradores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#place-time">El lugar y la fecha</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#conviertete-en-orador">Conviértete en orador</a>
+                            </li>
+                            <li class="nav-item">
+                <!--Para resaltar el texto-->
+                                    <!--El data toggle es para llamar el modal-->
+                                    <!--con data-bs-target uso el modal-->
+                                    <a class="nav-link text-platzi" href="#" data-bs-toggle="modal" data-bs-target="#modalcompra">Comprar tickets</a>
+                                    </li>
+                                    </li>
+                        </ul>
+                
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- Header-->
+
+<!-- Main-->
+    <main id="main" class="pt-5"> <!-- Esto se pone porque las imágenes son muy grandes.      Agregué data-pause="false, para que no tenga pausa"-->
+        <!--Para poner texto encima cambio el id de carouselExampleFade a carousel -->
+        <div id="carousel" class="carousel slide carousel-fade pt-4" data-bs-ride="carousel" data-bs-pause=“false”>
+                <div class="carousel-inner" >
+                <div class="carousel-item active">
+                    <img src="../proyecto3/Imagenesb/Cooperativa .jpg" class="d-block w-100" alt="hawaii 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="../proyecto3/Imagenesb/Deziro Sushi  - copia.jpg" class="d-block w-100" alt="hawaii 2">
+                </div>
+            
+                
+                <!--El contenedor para poner texto encima a la imagen-->
+                <div class="overlay">
+                    <div  class="container"><!--Esto para estar en una grilla centrada y alineada al contenido de la pàginaa-->
+                        <div  class="row align-items-center"><!--Esto es para poner las filas--><!--Y lo otro para alinear el texto verticalmente-->
+                            <div  class="col-md-6   offset-md-7  text-center text-md-right"> 
+                            <!--Esto es para poner las filas-->
+                            <!--El text-center es para que aparezca centrado en tamaño pequeño.
+                            El otro es para alinear el texto a la derecha, el text-md-right
+                                es para que que aparezca el texto en tamaño mediano-->
+                            <h1> ORATORIA</h1> <!--Esto es para poner el título-->
+                                    <!--d-none: es para que el texto me aparezca en dispositivos pequeños
+                                    y el d-md-block: para que me aparezca en los medianos-->
+                            <p class="d-none d-md-block">Llega por pimera vez a Argentina! Un evento para
+                                    compartir con nuestra comunidad el conocimiento y experiencia
+                                    en Oratoria.
+                                    Ven a conocer los disertantes y a 
+                                    estudiantes de ML.  
+                            </p>
+                                <!--Necesitas un botón, pero no los fuertes colores de fondo que traen. Reemplace
+                                    las clases de modificador predeterminadas con las .btn-outline-*
+                                    para eliminar todas las imágenes y colores de fondo en cualquier botón. -->
+                                <!--btn sería la clase-->
+                                <a  href class="btn btn-outline-light"> Quiero ser orador</a>
+                                <!--lo que sigue abajo lo saco de documentación de bootstrap en la parte de button-->
+                                                                                        <!--agregamos un modal-->
+                                <button type="button" class="btn btn-platzi" data-bs-toggle="modal" data-bs-target="#modalcompra">Comprar tickets</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <!--Main-->
+    
+    <!--Speakers-->
+    <!--El mt es margen top para separar el borde de la letra, crea un espacio
+    El mb es el margen boton, para separar la tarjeta del footer-->
+    <section id="speakers" class="my-4 mx-4">
+                <div class="container">
+                    <div class="row">
+                      <!--text-uppercase: Es para poner todo en mayúscula-->
+                        <div class="col text-uppercase text-center">
+                          <!--small: para poner la letra pequeña-->
+                            <small>Conoce a los</small>
+                            <h2>Oradores</h2>
+                        </div>
+                    </div>
+                </div>
+    
+    <!--Ahora vamos a crear una fila primero y luego se crea columna,
+    dentro de la misma vamos a poner las card(tarjetas)-->
+                 <div class="row">
+                 <!--ponemos md-4, para que las card ocupen 4 columnas
+                el mb el margeb botton es para separar las columnas por debajo-->
+                <!--en dispositivos pequeños mostramos 1 sola tarjetas
+              en medianos 2 tarjetas
+            en dispositivos grandes 3 tarjetas-->
+                     <div class="col-12 col-md-6 col-lg-6 mb-4">
+                       <!--pegamos lo de bootstrap-->
+                         <div class="card">
+                            <img src="../proyecto3/Imagenesb/Melisa.jpg" class="card-img-top" alt="Esta es Melisa">
+                            <div class="card-body">
+                              <!--el mb-o es para pegar el texto más al título -->
+                              <h5 class="card-title mb-0">Melisa</h5>
+                              <!--pegamos lo de bootstrap -->
+                              <!--pegamos lo de bootstrap, pero primero creamos un contenedor y se agregan insignias-->
+                              <div class="badges">
+                                <span  class =" badge badge-warning"> Oratoria Consciente práctica</span >
+                                <span  class =" badge badge-info"> Reaccionar</span>
+                              </div>
+                              <p class="card-text">Lic. en RRHH, Coach en Oratoria.</p>
+                                       <!-- quitamos el botón
+                              <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                            </div>
+                         </div>
+                     </div>
+                         <div class="col-12 col-md-6 col-lg-6 mb-4">
+                           <!--pegamos lo de bootstrap-->
+                             <div class="card">
+                                <img src="../proyecto3/Imagenesb/Vero.jpg" class="card-img-top" alt="Esta es Vero">
+                                <div class="card-body">
+                                  <h5 class="card-title mb-0">Vero</h5>
+                                  <!--pegamos lo de bootstrap, pero primero creamos un contenedor y se agregan insignias-->
+                                  <div class="badges">
+                                    <span  class =" badge badge-warning"> Oratoria Consciente teoría</span >
+                                    <span  class =" badge badge-info"> Reaccionar</span>
+                                  </div>
+                                  <p class="card-text">Profesora de Yoga, Coach en Oratoria</p>
+                                           <!-- quitamos el botón
+                                  <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                                </div>
+                             </div>
+                         </div>
+                    </div>
+    <!--Speakers-->
+    
+<!-- Lugar y Fecha -->
+  <section  id= "place-time">
+      <!--Se elige este contenedor para que ocupe todo el ancho disponible -->
+        <div class= "container-fluid">
+          <!--para darle un alineado a la fila-->
+            <div  class= "row align-items-center ">
+                                        <!--  pading left y pading right se le pone cero para que ocupe todo el ancho de la columna -->
+                <div  class= "col-12 col-lg-6 pt-0 pb-0">
+                    <img src= "../proyecto3/Imagenesb/Hotel.jpg" alt="Foto de hotel"/>
+                </div>
+                <!--tiene pading top para separar el título del borde y padin boton para separar el botón del borde-->
+                <div class="col-12 col-lg-6 pt-2 pb-4">
+                    <h2>Salsipuedes - Marzo 2022</h2>
+                    <p> Llega por pimera vez a Argentina! Un evento para
+                        compartir con nuestra comunidad el conocimiento y experiencia
+                        en Oratoria.
+                        Ven a conocer los disertantes y a 
+                        estudiantes de ML </p>
+                    <a  href= " # seccion-Convierte-orador " clase ="btn btn-outline-luz"> Quiero ser orador </a>
+                    <!--agregar a los links que dirigen a un sitio diferente al nuestro la etiqueta target="_blank" para que el link se abra en otra pestaña del navegador y que el usuario continue en nuestro sitio.-->
+                    <a class= "btn btn-outline-light" href="https://es.wikipedia.org/wiki/Honolulu" target="_blank">Conoce más</a>
+                    <!--agregamos un botón -->
+                    <button class= " btn btn-platzi " data-toggle = " modal " data-target = " #modal " > Comprar boletos </button>
+                </div>
+            </div>
+          </div>
+  </section>
+<!-- Lugar y Fecha-->
+
+
+<!-- Utilización de formularios-->
+<!--Convièrtete en orador   (Recordar se la sección, luego el contenedor y dentro del mismo las filas
+con sus respectivas columnas)-->
+  <section id="conviertete-en-orador" class="pt-3 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col text-uppercase text-center">
+          <small>Conviértete en un</small>
+          <h2>Orador</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <!--lo de la abreviatura lo saqué de bootdtrap para generar un link a la palabra
+        ignite-->
+          Anótate como orador para dar una charla ignite.</abbr></p>
+          Cuéntanos de qué quieres hablar!
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+          <form>
+            <div class="form-row">
+              <!--El form-group es para poner un espaciado entre las columnas cuando está en tamaño pequeño-->
+              <div class="mb-3 form-group col-12 col-md-6">
+                <input type="text" class="form-control" placeholder="Nombre">
+              </div>
+              <div class="mb-3 form-group col-12 col-md-6">
+                <input type="text" class="form-control" placeholder="Apellido">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="mb-3 form-group col">
+              <!--  El control textarea es utilizado cuando tenemos que introducir varias líneas de texto-->
+                                            <!-- con form-control decimos que es un input-->
+                <textarea name="text" class="form-control form-control-lg" placeholder="Sobre qué quieres hablar?"></textarea>
+                <small class="form-text text-muted">
+                  Recuerda incluir un título para tu charla
+                </small>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                                    <!--La clase btn-block es para que ocupe más espacio-->
+                <button type="button" class="btn btn-platzi btn-block">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- /Conviértete en orador -->
+
+
+<!-- Footer-->
+<!-- el pb es pading botton crea un espacio por debajo, el pt es pading top crea un espacio
+por arriba -->
+  <footer id= "footer" class="pb-4 pt-4">
+    <div class="container" >
+      <div class="row text-center">
+          <!-- Col 12 quiere decir que en dispositivos pequeños
+        ocupe las 12 columnas, col-lg que en los grandes se distribuya por igual -->
+        <div class="col-12 col-lg">
+          <!-- esto reproduce en un link, figura el texto como subrayado -->
+          <a href= "#">Preguntas frecuentes</a>
+        </div>
+        <div class="col-12 col-lg">
+          <a href="#">Contáctanos</a>
+        </div>
+        <div class="col-12 col-lg">
+          <a href="#">Prensa</a>
+        </div>
+        <div class="col-12 col-lg">
+          <a href="#">Términos y condiciones</a>
+        </div>
+        <div class="col-12 col-lg">
+          <a href="#">Privacidad</a>
+        </div>
+        <div class="col-12 col-lg">
+          <a href="#">Estudiantes</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- Footer-->
+
+
+
+<!-- Modal, se recomienda ponerlo por fuera de todos los elementos-->
+<!-- Button trigger modal -->
+<!-- Modal, también uso el header en esta sección es para la compra de tickets y en el main agregamos datas
+porque también hay otro botón -->
+              <!-- cambio el id -->
+<div class="modal fade" id="modalcompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+                                                      <!--acá se le cambió el título del modal -->
+      <h5 class="modal-title" id="exampleModalCenterTitle">Comprar tickets</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+ <!-- Dentro de los ... hay que agregar el formulario del modal -->
+           <form>
+             <div class="form-row">
+                <!-- el form-group es para que ocupe todo el ancho de la fila-->
+                <div class="form-group col">
+            <!-- aquí agrego lo del https://getbootstrap.com/docs/5.1/forms/input-group/ -->
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                     </div>
+                </div>
+             </div>
+          </form>
+         <!-- agregamos una alerta abajo del formulario-->
+             <div class="alert alert-warning" role="alert">
+               Recibirás un correo de confirmación, si sales sorteado!
+             </div>
+
+     </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                 <!-- cambio el nombre del btn de primary a platzi -->
+      <button type="button" class="btn btn-platzy">Comprar</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Modal-->
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--ver si van o no-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="Platzi.js"></script>
+</body>
+</html>
+
+
+
+
+
